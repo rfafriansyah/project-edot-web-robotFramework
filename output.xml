@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.9 on win32)" generated="20250212 09:40:24.100" rpa="false" schemaversion="3">
+<suite id="s1" name="Contact Us" source="C:\Users\Rhama Fahri\projectCoding\test-kerja\tutorial-project-web-robotFramework\demo-robotframework\test\test_cases\contact_us.robot">
+<test id="s1-t1" name="Valid Login Test" line="26">
+<kw name="Open Test Browser" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250212 09:40:24.438" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001E0BE317990&gt;</msg>
+<status status="PASS" starttime="20250212 09:40:24.437" endtime="20250212 09:40:24.438"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250212 09:40:24.438" endtime="20250212 09:40:24.438"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250212 09:40:24.438" endtime="20250212 09:40:24.438"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250212 09:40:24.438" endtime="20250212 09:40:24.439"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250212 09:40:24.439" endtime="20250212 09:40:24.439"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250212 09:40:24.439" endtime="20250212 09:40:24.439"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20250212 09:40:24.440" level="INFO">Opening browser 'chrome' to base url 'https://edot.id/contact-us'.</msg>
+<status status="PASS" starttime="20250212 09:40:24.439" endtime="20250212 09:40:28.501"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20250212 09:40:28.502" endtime="20250212 09:40:28.612"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20250212 09:40:28.612" endtime="20250212 09:40:28.617"/>
+</kw>
+<status status="PASS" starttime="20250212 09:40:24.437" endtime="20250212 09:40:28.617"/>
+</kw>
+<kw name="Input Form Contact Us" library="contact_us_page">
+<arg>${NAME}</arg>
+<arg>${EMAIL}</arg>
+<arg>${PHONE_NUMBER}</arg>
+<arg>${COMPANY_NAME}</arg>
+<arg>${NUMBER_OF_EMPLOYEES}</arg>
+<arg>${SOLUTIONS}</arg>
+<arg>${QUESTIONS}</arg>
+<arg>${MESSAGE_SUCCESS}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${INPUT_NAME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20250212 09:40:28.909" level="INFO">Element '//input[@name="name"]' is displayed.</msg>
+<status status="PASS" starttime="20250212 09:40:28.619" endtime="20250212 09:40:28.910"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${INPUT_EMAIL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20250212 09:40:28.982" level="INFO">Element '//input[@name="email"]' is displayed.</msg>
+<status status="PASS" starttime="20250212 09:40:28.910" endtime="20250212 09:40:28.983"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${INPUT_PHONE_NUMBER}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20250212 09:40:29.024" level="INFO">Element '//input[@id='phone_number']' is displayed.</msg>
+<status status="PASS" starttime="20250212 09:40:28.983" endtime="20250212 09:40:29.024"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${INPUT_COMPANY_NAME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20250212 09:40:29.059" level="INFO">Element '//input[@id='company_name']' is displayed.</msg>
+<status status="PASS" starttime="20250212 09:40:29.025" endtime="20250212 09:40:29.059"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${INPUT_NUMBER_OF_EMPLOYEES}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20250212 09:40:29.090" level="INFO">Element 'xpath://button[@id='number_of_employees']' is displayed.</msg>
+<status status="PASS" starttime="20250212 09:40:29.060" endtime="20250212 09:40:29.090"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${INPUT_SOLUTION}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20250212 09:40:29.118" level="INFO">Element '//button[@id='solutions']' is displayed.</msg>
+<status status="PASS" starttime="20250212 09:40:29.090" endtime="20250212 09:40:29.118"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${INPUT_QUESTION}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20250212 09:40:29.145" level="INFO">Element '//textarea[@id='questions']' is displayed.</msg>
+<status status="PASS" starttime="20250212 09:40:29.118" endtime="20250212 09:40:29.145"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20250212 09:40:29.173" level="INFO">Element 'xpath://button[@type='submit']' is displayed.</msg>
+<status status="PASS" starttime="20250212 09:40:29.145" endtime="20250212 09:40:29.173"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NAME}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250212 09:40:29.174" level="INFO">Typing text 'Rhama Fahri' into text field '//input[@name="name"]'.</msg>
+<status status="PASS" starttime="20250212 09:40:29.173" endtime="20250212 09:40:29.379"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250212 09:40:29.380" level="INFO">Typing text 'rhamafahri123@gmail.com' into text field '//input[@name="email"]'.</msg>
+<status status="PASS" starttime="20250212 09:40:29.379" endtime="20250212 09:40:29.554"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_PHONE_NUMBER}</arg>
+<arg>${phoneNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250212 09:40:29.555" level="INFO">Typing text '0813412948213' into text field '//input[@id='phone_number']'.</msg>
+<status status="PASS" starttime="20250212 09:40:29.554" endtime="20250212 09:40:29.712"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_COMPANY_NAME}</arg>
+<arg>${companyName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250212 09:40:29.713" level="INFO">Typing text 'PT. RHAMA TEST' into text field '//input[@id='company_name']'.</msg>
+<status status="PASS" starttime="20250212 09:40:29.713" endtime="20250212 09:40:29.865"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${INPUT_NUMBER_OF_EMPLOYEES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250212 09:40:29.866" level="INFO">Clicking element 'xpath://button[@id='number_of_employees']'.</msg>
+<status status="PASS" starttime="20250212 09:40:29.865" endtime="20250212 09:40:30.000"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:[data-value='${numberOfEmployees}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250212 09:40:30.001" level="INFO">Clicking element 'css:[data-value='51 - 100']'.</msg>
+<status status="PASS" starttime="20250212 09:40:30.000" endtime="20250212 09:40:30.101"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${INPUT_SOLUTION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250212 09:40:30.102" level="INFO">Clicking element '//button[@id='solutions']'.</msg>
+<status status="PASS" starttime="20250212 09:40:30.101" endtime="20250212 09:40:30.177"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:[data-value='${solutions}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250212 09:40:30.177" level="INFO">Clicking element 'css:[data-value='esuite (ERP)']'.</msg>
+<status status="PASS" starttime="20250212 09:40:30.177" endtime="20250212 09:40:30.262"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_QUESTION}</arg>
+<arg>${questions}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250212 09:40:30.263" level="INFO">Typing text 'Testttttttt' into text field '//textarea[@id='questions']'.</msg>
+<status status="PASS" starttime="20250212 09:40:30.262" endtime="20250212 09:40:30.369"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20250212 09:40:30.370" level="INFO">Double clicking element 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20250212 09:40:30.369" endtime="20250212 09:40:30.824"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TOAST_SUCCESS_SUBMIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20250212 09:40:30.984" level="INFO">Element 'xpath://li[@class='group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg']/div[2]/div[.='Successfully Sent']' is displayed.</msg>
+<status status="PASS" starttime="20250212 09:40:30.824" endtime="20250212 09:40:30.985"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${TOAST_SUCCESS_SUBMIT}</arg>
+<arg>${messageToast}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20250212 09:40:31.008" level="INFO">Element 'xpath://li[@class='group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg']/div[2]/div[.='Successfully Sent']' contains text 'Successfully Sent'.</msg>
+<status status="PASS" starttime="20250212 09:40:30.985" endtime="20250212 09:40:31.009"/>
+</kw>
+<status status="PASS" starttime="20250212 09:40:28.618" endtime="20250212 09:40:31.009"/>
+</kw>
+<kw name="Pause Execution" library="Dialogs">
+<doc>Pauses execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" starttime="20250212 09:40:31.009" endtime="20250212 09:40:33.853"/>
+</kw>
+<kw name="Close Test Browser" library="common" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20250212 09:40:33.854" endtime="20250212 09:40:40.109"/>
+</kw>
+<status status="PASS" starttime="20250212 09:40:33.853" endtime="20250212 09:40:40.109"/>
+</kw>
+<status status="PASS" starttime="20250212 09:40:24.435" endtime="20250212 09:40:40.110"/>
+</test>
+<doc>Test suite for login functionality</doc>
+<status status="PASS" starttime="20250212 09:40:24.102" endtime="20250212 09:40:40.111"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Contact Us">Contact Us</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
